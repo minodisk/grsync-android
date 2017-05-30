@@ -1,0 +1,14 @@
+{
+  "name": "mock",
+  "version": "1.0.0",
+  "description": "Mock server emulates GR2 API via Wi-Fi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "minodisk",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

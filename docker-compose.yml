@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+
+  app:
+    build: app
+      # context: app
+      # args:
+      #   PROJECT: GRSync
+    privileged: true
+    network_mode: host
+    # environment:
+    #   DISPLAY: ':0'
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      # - /tmp/.X11-unix:/tmp/.X11-unix
+      # - /home/$USER/.android:/root/.android
+      - ./app:/app
+    ports:
+      - 8081:8081
+
+  mock:
+    build: mock
+    volumes:
+      - ./mock:/mock
+    ports:
+      - 80:80
