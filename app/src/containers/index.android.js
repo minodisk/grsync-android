@@ -12,6 +12,7 @@ const store = configureStore()
 
 export default class Index extends Component {
   render() {
+    const {error} = this.props
     return (
       <Provider store={store}>
         <Root />

@@ -7,6 +7,7 @@ import {
 import ToolbarAndroid from 'ToolbarAndroid'
 
 import {
+  configure,
   reload,
   selectAll,
   unselectAll,
@@ -15,8 +16,19 @@ import {
 
 class Toolbar extends Component {
   render() {
-    const {reload, selectAll, unselectAll, sync, selectedFiles} = this.props
+    const {
+      configure,
+      reload,
+      selectAll,
+      unselectAll,
+      sync,
+      selectedFiles,
+    } = this.props
     const actions = [
+      {
+        title: 'Configuration',
+        action: configure,
+      },
       {
         title: "Reload Photos",
         action: reload,
@@ -61,6 +73,7 @@ export default connect((state) => {
   }
 }, (dispatch) => {
   return {
+    configure: () => dispatch(configure()),
     reload: () => dispatch(reload()),
     selectAll: () => dispatch(selectAll()),
     unselectAll: () => dispatch(unselectAll()),

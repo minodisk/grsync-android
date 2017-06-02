@@ -124,6 +124,9 @@ WORKDIR /app
 #     echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
 #     adduser $USERNAME sudo
 
+# COPY package.json yarn.lock ./
+# RUN npm install
+# COPY android ios src app.json index.*.js ./
 
 # Execute
 

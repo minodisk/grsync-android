@@ -18,6 +18,16 @@ import {
   PING,
   RELOAD,
   SYNC,
+
+  WIFIS_LOAD,
+  loadingWifis,
+  loadedWifis,
+  cantBeLoadedWifis,
+
+  WIFI_CONNECT,
+  connectedWifi,
+  cantBeConnectedWifi,
+
   reloaded,
   reloadFailed,
   synced,
@@ -27,18 +37,30 @@ import {
 } from '../actions'
 import * as apis from '../apis'
 
-// CameraRoll
-//   .getPhotos({first: 25})
-//   .then((photos) => console.log(photos))
+function* loadWifis(action) {
+  yield put(loadingWifis(true))
+  try {
+    const payload = yield call(apis.loadWifis)
+    yield put(loadedWifis(payload))
+  } catch (err) {
+    yield put(cantBeLoadedWifis(err))
+  }
+  yield put(loadingWifis(false))
+}
 
-// function* ping(action) {
-//   try {
-//     const dirs = yield call(ping)
-//     yield put(reloaded(dirs))
-//   } catch (err) {
-//     yield put(reloadFailed(err)))
-//   }
-// }
+function* connectWifi(action) {
+  const {ssid, password} = action.payload
+  try {
+    const prevWifi = yield call(apis.currentWifi)
+    console.log('sagas connectWifi prev:', wifi)
+    yield call(apis.connectWifi, ssid, password)
+    const wifi = yield call(apis.currentWifi)
+    console.log('sagas connectWifi current:', wifi)
+    yield put(connectedWifi(wifi))
+  } catch (err) {
+    yield put(cantBeConnectedWifi(err))
+  }
+}
 
 function* reload(action) {
   yield put(loading(true))
@@ -89,6 +111,8 @@ function createEventChannel(fn) {
 }
 
 export default function *sagas() {
+  yield takeEvery(WIFIS_LOAD, loadWifis)
+  yield takeEvery(WIFI_CONNECT, connectWifi)
   yield takeEvery(RELOAD, reload)
   yield takeEvery(SYNC, sync)
 }

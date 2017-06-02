@@ -4,18 +4,13 @@ services:
 
   app:
     build: app
-      # context: app
-      # args:
-      #   PROJECT: GRSync
     privileged: true
     network_mode: host
-    # environment:
-    #   DISPLAY: ':0'
     volumes:
       - /dev/bus/usb:/dev/bus/usb
+      - ./app:/app
       # - /tmp/.X11-unix:/tmp/.X11-unix
       # - /home/$USER/.android:/root/.android
-      - ./app:/app
     ports:
       - 8081:8081
 

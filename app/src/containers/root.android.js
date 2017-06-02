@@ -2,21 +2,19 @@ import React, {
   Component
 } from 'react'
 import {
-  View,
-  ActivityIndicator,
-} from 'react-native'
-import {
   connect,
 } from 'react-redux'
-import Alert from 'Alert'
+import {
+  Alert,
+  View,
+} from 'react-native'
 
-import ProgressIndicator from '../components/progress_indicator'
-import Files from './files'
-import Toolbar from './toolbar'
+import Wifis from './wifis'
+import Photos from './photos'
 
 class Root extends Component {
   render() {
-    const {loading, syncing, error} = this.props
+    const {wifi, error} = this.props
     if (error != null) {
       Alert.alert(error.message)
     }
@@ -26,35 +24,8 @@ class Root extends Component {
           flex: 1,
         }}
       >
-        <Toolbar />
-        <View
-          style={{
-            flex: 1,
-          }}
-        >
-          <Files />
-          {
-            syncing.progress != null ? <ProgressIndicator
-              ratio={syncing.progress}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-              }}
-            /> : null
-          }
-          {
-            loading ? <ActivityIndicator
-              size='large'
-              style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                // backgroundColor: 'rgba(0, 0, 0, 0.2)',
-              }}
-            /> : null
-          }
-        </View>
+        <Photos />
+        // <Wifis />
       </View>
     )
   }
@@ -63,8 +34,7 @@ class Root extends Component {
 export default connect((state) => {
   console.log('Root.connect:', state)
   return {
-    loading: state.loading,
-    syncing: state.syncing,
+    wifi: state.wifi,
     error: state.error,
   }
 }, (dispatch) => {

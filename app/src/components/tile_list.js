@@ -33,7 +33,6 @@ export default class TileList extends Component {
     Object.keys(data).forEach((section) => {
       const files = Array.prototype.concat.call([], data[section])
       let lacks = (columns - files.length % columns) % columns
-      console.log(section, columns, lacks)
       while (lacks > 0) {
         files.push(null)
         lacks--

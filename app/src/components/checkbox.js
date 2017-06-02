@@ -3,8 +3,8 @@ import React, {
 } from 'react'
 import {
   View,
+  TouchableNativeFeedback,
 } from 'react-native'
-import TouchableNativeFeedback from 'TouchableNativeFeedback'
 
 export default class Checkbox extends Component {
   render() {

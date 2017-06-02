@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="91d2e97b00f129155c311e72e5897eebf8f28f7f">
+        <dex dex="/app/android/app/build/intermediates/pre-dexed/debug/GRSync-react-native-android-wifi-unspecified_59f077b74101c1162ad6e5d18250cd233eb341df.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"

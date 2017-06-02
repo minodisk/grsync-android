@@ -17,6 +17,7 @@ ADDED from /app/android/app/src/main/AndroidManifest.xml:1:1-32:12
 		ADDED from /app/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /app/android/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from /app/android/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
@@ -26,6 +27,7 @@ MERGED from [com.facebook.react:react-native:0.44.0] /app/android/app/build/inte
 		ADDED from /app/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from /app/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [GRSync:react-native-fs:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-fs/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.44.0] /app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] /app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
@@ -87,6 +89,22 @@ activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from /app/android/app/src/main/AndroidManifest.xml:29:7-84
 	android:name
 		ADDED from /app/android/app/src/main/AndroidManifest.xml:29:17-81
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:13:5-76
+	android:name
+		ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:13:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:14:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from [GRSync:react-native-android-wifi:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-android-wifi/unspecified/AndroidManifest.xml:15:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from [GRSync:react-native-fs:unspecified] /app/android/app/build/intermediates/exploded-aar/GRSync/react-native-fs/unspecified/AndroidManifest.xml:11:5-81
 	android:name

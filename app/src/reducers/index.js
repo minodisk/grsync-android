@@ -12,6 +12,9 @@ import {
   SELECTED_CHANGED,
   SELECT_ALL,
   UNSELECT_ALL,
+  WIFIS_LOADING,
+  WIFIS_LOADED,
+  WIFI_CONNECTED,
 } from '../actions'
 
 function loading(loading = false, action) {
@@ -74,9 +77,36 @@ function files(files = [], action) {
   return files
 }
 
+function wifi(wifi = null, action) {
+  switch (action.type) {
+  case WIFI_CONNECTED:
+    return action.payload
+  }
+  return wifi
+}
+
+function wifis(wifis = [], action) {
+  switch (action.type) {
+  case WIFIS_LOADED:
+    return action.payload
+  }
+  return wifis
+}
+
+function wifisLoading(loading = false, action) {
+  switch (action.type) {
+  case WIFIS_LOADING:
+    return action.payload
+  }
+  return loading
+}
+
 export default combineReducers({
   loading,
   syncing,
   error,
   files,
+  wifis,
+  wifi,
+  wifisLoading,
 })

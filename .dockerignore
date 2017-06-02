@@ -1,3 +1,2 @@
-app/android
-app/ios
+Dockerfile
 node_modules
