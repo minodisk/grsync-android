@@ -1,1 +1,12 @@
+# Node packages
 node_modules
+
+# Cache
+app/.cache
+
+# Credential files
+release.keystore
+*.env
+
+# Built
+*.apk

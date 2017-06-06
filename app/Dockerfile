@@ -38,15 +38,14 @@ RUN \
       tar -xzf $ANDROID_SDK_FILENAME && \
       rm $ANDROID_SDK_FILENAME && \
       chmod -R 0775 $ANDROID_HOME && \
-      chown -R root:root $ANDROID_HOME
+      chown -R root:root $ANDROID_HOME && \
       # chgrp -R users $ANDROID_HOME && \
-
-RUN \
       echo "y" | android update sdk \
         --no-ui \
         --force \
         --all \
-        --filter platform-tools,android-23,build-tools-23.0.1,extra-android-support,extra-android-m2repository,sys-img-x86_64-android-23,extra-google-m2repository
+        --filter platform-tools,android-23,build-tools-23.0.1,extra-android-support,extra-android-m2repository,sys-img-x86_64-android-23,extra-google-m2repository && \
+      mkdir -p $ANDROID_HOME/licenses
 
 
 # Setup Node
@@ -106,17 +105,16 @@ RUN \
       npm install -g \
         react-native-cli
 
-RUN mkdir -p $ANDROID_HOME/licenses && echo '8933bad161af4178b1185d1a37fbf41ea5269c55' > $ANDROID_HOME/licenses/android-sdk-license
-WORKDIR /app
+WORKDIR /grsync
 # ARG PROJECT
 # RUN \
 #       react-native init $PROJECT && \
 #       cp -r ./$PROJECT/* . && \
 #       rm -r ./$PROJECT
 
-# WORKDIR /app/android
+# WORKDIR /grsync/android
 # RUN ./gradlew installDebug
-# WORKDIR /app
+# WORKDIR /grsync
 
 # ENV USERNAME dev
 # RUN adduser --disabled-password --gecos '' $USERNAME && \
@@ -130,9 +128,4 @@ WORKDIR /app
 
 # Execute
 
-CMD \
-      react-native start > /dev/null 2>&1 & \
-      adb reverse tcp:8081 tcp:8081 && \
-      adb uninstall grsync.com && \
-      react-native run-android && \
-      tail -f /dev/null
+CMD bash debug.sh

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/minodisk/go/src/github.com/minodisk/grsync/app/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/minodisk/go/src/github.com/minodisk/grsync/app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/grsync/android/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/grsync/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    }
+]

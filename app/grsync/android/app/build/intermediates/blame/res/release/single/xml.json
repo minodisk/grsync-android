@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/minodisk/go/src/github.com/minodisk/grsync/app/android/app/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/home/minodisk/go/src/github.com/minodisk/grsync/app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/grsync/android/app/build/intermediates/res/merged/release/xml/preferences.xml",
+        "source": "/grsync/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/res/xml/preferences.xml"
+    }
+]

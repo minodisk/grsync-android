@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/minodisk/go/src/github.com/minodisk/grsync/app/android/app/build/intermediates/res/merged/release/mipmap-xhdpi/ic_launcher.png",
+        "source": "/home/minodisk/go/src/github.com/minodisk/grsync/app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/grsync/android/app/build/intermediates/res/merged/release/mipmap-xhdpi/ic_launcher.png",
+        "source": "/grsync/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    }
+]

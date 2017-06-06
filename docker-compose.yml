@@ -8,9 +8,10 @@ services:
     network_mode: host
     volumes:
       - /dev/bus/usb:/dev/bus/usb
-      - ./app:/app
-      # - /tmp/.X11-unix:/tmp/.X11-unix
-      # - /home/$USER/.android:/root/.android
+      - ./app/.cache/.android:/root/.android
+      - ./app/.cache/.gradle:/root/.gradle
+      - ./app/grsync:/grsync
+    env_file: secret.env
     ports:
       - 8081:8081
 
